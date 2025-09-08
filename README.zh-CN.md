@@ -2,7 +2,7 @@
 
 一款基于 Vue 3 + Vite + Electron 的桌面端 AI 知识工作台。
 
-[English](README.en.md) | 简体中文
+<p align="center"><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a></p>
 
 ## 功能特点 🚀
 
@@ -17,9 +17,7 @@
 - 🖥️ 桌面级体验：系统托盘、无边框窗口、窗口控制、外链安全打开
 - 🔒 安全与稳定：单实例运行、异常捕获、主渲染进程隔离
 
-> 欢迎在 GitHub 提交 Issue/PR 改进体验与生态插件 🙌
-
-## 安装与运行（pnpm）🧰
+## 安装与运行（pnpm）📦
 
 ```bash
 # 安装依赖

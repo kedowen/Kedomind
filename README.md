@@ -2,7 +2,7 @@
 
 A desktop AI workspace built with Vue 3 + Vite + Electron.
 
-English | [简体中文](README.zh-CN.md)
+<p align="center"><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a></p>
 
 ## Features 🚀
 
@@ -17,7 +17,7 @@ English | [简体中文](README.zh-CN.md)
 - 🖥️ Desktop UX: system tray, frameless window, window controls, safe external links
 - 🔒 Security & stability: single-instance, error handling, process isolation
 
-## Install & Run (pnpm) 🧰
+## Install & Run (pnpm) 📦
 
 ```bash
 pnpm install
