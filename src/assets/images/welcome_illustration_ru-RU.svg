@@ -1,0 +1,376 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F1F5F9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1D4ED8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="nodeGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="nodeGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- 网格图案 -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBD5E1" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+
+    <!-- 六边形图案 -->
+    <pattern id="hexPattern" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 50,15 50,37 30,50 10,37 10,15" fill="none" stroke="#E2E8F0" stroke-width="0.8" opacity="0.2"/>
+    </pattern>
+
+    <!-- 动画定义 -->
+    <animateTransform id="floatAnimation1" attributeName="transform" type="translate" 
+                      values="0,0; 0,-20; 0,0" dur="4s" repeatCount="indefinite"/>
+    <animateTransform id="floatAnimation2" attributeName="transform" type="translate" 
+                      values="0,0; 0,15; 0,0" dur="3.5s" repeatCount="indefinite"/>
+    <animateTransform id="floatAnimation3" attributeName="transform" type="translate" 
+                      values="0,0; 0,-12; 0,0" dur="5s" repeatCount="indefinite"/>
+    <animateTransform id="floatAnimation4" attributeName="transform" type="translate" 
+                      values="0,0; 0,18; 0,0" dur="4.5s" repeatCount="indefinite"/>
+    
+    <!-- 脉冲动画 -->
+    <animate id="pulseAnimation" attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    <animate id="slowPulse" attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    
+    <!-- 旋转动画 -->
+    <animateTransform id="rotateAnimation" attributeName="transform" type="rotate" 
+                      values="0 400 300;360 400 300" dur="30s" repeatCount="indefinite"/>
+    <animateTransform id="reverseRotate" attributeName="transform" type="rotate" 
+                      values="360 400 300;0 400 300" dur="40s" repeatCount="indefinite"/>
+  </defs>
+
+  <!-- 网格背景 -->
+  <rect width="100%" height="100%" fill="url(#gridPattern)" opacity="0.3"/>
+  <rect width="100%" height="100%" fill="url(#hexPattern)" opacity="0.2"/>
+
+  <!-- 背景装饰圆环 -->
+  <g opacity="0.15">
+    <circle cx="400" cy="300" r="200" fill="none" stroke="#3B82F6" stroke-width="1">
+      <use href="#rotateAnimation"/>
+    </circle>
+    <circle cx="400" cy="300" r="260" fill="none" stroke="#10B981" stroke-width="0.8">
+      <use href="#reverseRotate"/>
+    </circle>
+    <circle cx="400" cy="300" r="320" fill="none" stroke="#8B5CF6" stroke-width="0.6">
+      <use href="#rotateAnimation"/>
+    </circle>
+  </g>
+
+  <!-- 背景发光效果 -->
+  <circle cx="400" cy="300" r="180" fill="url(#glowGradient)">
+    <animate attributeName="r" values="160;220;160" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 中心大脑网络 -->
+  <g transform="translate(400, 300) scale(0.8)">
+    <!-- 大脑主体 -->
+    <path d="M-60,-45 C-80,-70 -45,-85 -15,-80 C20,-85 60,-70 55,-45 C75,-20 65,15 35,35 C15,50 -15,50 -35,35 C-65,15 -75,-20 -60,-45 Z" 
+          fill="url(#brainGradient)" stroke="#1E40AF" stroke-width="3" opacity="0.9">
+      <animateTransform attributeName="transform" type="scale" 
+                        values="1;1.1;1" dur="6s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- 大脑纹理和连接 -->
+    <g opacity="0.8">
+      <path d="M-45,-35 Q-25,-50 -5,-35 Q15,-25 35,-35" fill="none" stroke="#1E40AF" stroke-width="2.5"/>
+      <path d="M-40,-10 Q-20,-25 0,-10 Q20,5 40,-10" fill="none" stroke="#1E40AF" stroke-width="2.5"/>
+      <path d="M-35,20 Q-15,5 5,20 Q25,35 45,20" fill="none" stroke="#1E40AF" stroke-width="2.5"/>
+      <path d="M-25,-25 Q0,-35 25,-25" fill="none" stroke="#1E40AF" stroke-width="2"/>
+      <path d="M-30,5 Q0,-5 30,5" fill="none" stroke="#1E40AF" stroke-width="2"/>
+    </g>
+    
+    <!-- 大脑中心核心 -->
+    <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9">
+      <use href="#pulseAnimation"/>
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#3B82F6" opacity="0.8">
+      <use href="#slowPulse"/>
+    </circle>
+  </g>
+
+  <!-- 主要思维节点群 -->
+  <!-- 左上区域 -->
+  <g transform="translate(200, 160) scale(0.8)">
+    <circle r="35" fill="url(#nodeGradient1)" opacity="0.8">
+      <use href="#floatAnimation1"/>
+    </circle>
+    <circle r="20" fill="#ffffff" opacity="0.5"/>
+    <circle r="12" fill="url(#nodeGradient1)" opacity="0.9"/>
+    <!-- 思考图标 -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="-8" cy="-8" r="2"/>
+      <circle cx="0" cy="-5" r="3"/>
+      <circle cx="8" cy="0" r="4"/>
+    </g>
+  </g>
+
+  <!-- 右上区域 -->
+  <g transform="translate(600, 160) scale(0.8)">
+    <circle r="32" fill="url(#nodeGradient2)" opacity="0.8">
+      <use href="#floatAnimation2"/>
+    </circle>
+    <circle r="18" fill="#ffffff" opacity="0.5"/>
+    <circle r="10" fill="url(#nodeGradient2)" opacity="0.9"/>
+    <!-- 搜索图标 -->
+    <circle cx="0" cy="-3" r="8" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M6,4 L12,10" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- 左下区域 -->
+  <g transform="translate(200, 440) scale(0.8)">
+    <circle r="28" fill="url(#nodeGradient3)" opacity="0.8">
+      <use href="#floatAnimation3"/>
+    </circle>
+    <circle r="16" fill="#ffffff" opacity="0.5"/>
+    <circle r="8" fill="url(#nodeGradient3)" opacity="0.9"/>
+    <!-- 灯泡图标 -->
+    <circle cx="0" cy="-3" r="6" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M-4,5 L4,5 M-3,8 L3,8 M-2,11 L2,11" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- 右下区域 -->
+  <g transform="translate(600, 440) scale(0.8)">
+    <circle r="30" fill="url(#nodeGradient4)" opacity="0.8">
+      <use href="#floatAnimation4"/>
+    </circle>
+    <circle r="17" fill="#ffffff" opacity="0.5"/>
+    <circle r="9" fill="url(#nodeGradient4)" opacity="0.9"/>
+    <!-- 文档图标 -->
+    <rect x="-6" y="-8" width="12" height="16" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M-4,-5 L4,-5 M-4,-2 L4,-2 M-4,1 L4,1 M-4,4 L2,4" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- 次级节点群 -->
+  <!-- 顶部中心 -->
+  <g transform="translate(400, 110) scale(0.8)">
+    <circle r="20" fill="url(#nodeGradient5)" opacity="0.7">
+      <use href="#floatAnimation1"/>
+    </circle>
+    <circle r="12" fill="#ffffff" opacity="0.4"/>
+    <!-- 齿轮图标 -->
+    <path d="M-10,0 L-7,-7 L0,-7 L7,-7 L10,0 L7,7 L0,7 L-7,7 Z" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="0" r="4" fill="#06B6D4" opacity="0.7"/>
+  </g>
+
+  <!-- 左侧中心 -->
+  <g transform="translate(120, 300) scale(0.8)">
+    <circle r="18" fill="url(#nodeGradient1)" opacity="0.7">
+      <use href="#floatAnimation3"/>
+    </circle>
+    <circle r="10" fill="#ffffff" opacity="0.4"/>
+    <!-- 代码图标 -->
+    <rect x="-6" y="-4" width="12" height="8" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M-3,-2 L0,0 L-3,2 M3,-2 L0,0 L3,2" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- 右侧中心 -->
+  <g transform="translate(680, 300) scale(0.8)">
+    <circle r="18" fill="url(#nodeGradient3)" opacity="0.7">
+      <use href="#floatAnimation2"/>
+    </circle>
+    <circle r="10" fill="#ffffff" opacity="0.4"/>
+    <!-- 数据图标 -->
+    <rect x="-5" y="-6" width="10" height="3" fill="#ffffff" opacity="0.9"/>
+    <rect x="-5" y="-2" width="10" height="3" fill="#ffffff" opacity="0.7"/>
+    <rect x="-5" y="2" width="10" height="3" fill="#ffffff" opacity="0.5"/>
+  </g>
+
+  <!-- 底部中心 -->
+  <g transform="translate(400, 490) scale(0.8)">
+    <circle r="16" fill="url(#nodeGradient4)" opacity="0.7">
+      <use href="#floatAnimation4"/>
+    </circle>
+    <circle r="9" fill="#ffffff" opacity="0.4"/>
+    <!-- 网络图标 -->
+    <circle cx="-5" cy="-3" r="2" fill="#ffffff"/>
+    <circle cx="5" cy="-3" r="2" fill="#ffffff"/>
+    <circle cx="0" cy="4" r="2" fill="#ffffff"/>
+    <path d="M-5,-3 L5,-3 M-5,-3 L0,4 M5,-3 L0,4" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- 复杂连接网络 -->
+  <g opacity="0.5">
+    <!-- 主连接线 -->
+    <path d="M340,270 Q270,215 200,160" fill="none" stroke="#6B7280" stroke-width="3" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M460,270 Q530,215 600,160" fill="none" stroke="#6B7280" stroke-width="3" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M340,330 Q270,385 200,440" fill="none" stroke="#6B7280" stroke-width="3" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="4s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M460,330 Q530,385 600,440" fill="none" stroke="#6B7280" stroke-width="3" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="3.8s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- 次级连接 -->
+    <path d="M400,240 Q400,175 400,110" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="4s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M340,300 Q230,300 120,300" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M460,300 Q570,300 680,300" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="4.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M400,360 Q400,425 400,490" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- 交叉连接 -->
+    <path d="M200,160 Q400,250 600,440" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+      <animate attributeName="stroke-dashoffset" values="0;-8" dur="6s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M600,160 Q400,250 200,440" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+      <animate attributeName="stroke-dashoffset" values="0;-8" dur="6.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- 丰富的粒子系统 -->
+  <g opacity="0.7">
+    <!-- 主粒子群 -->
+    <circle cx="120" cy="80" r="4" fill="#3B82F6">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; 20,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <use href="#pulseAnimation"/>
+    </circle>
+    
+    <circle cx="680" cy="100" r="3" fill="#10B981">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; -15,12; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <use href="#slowPulse"/>
+    </circle>
+    
+    <circle cx="100" cy="520" r="3.5" fill="#8B5CF6">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; 12,15; 0,0" dur="6s" repeatCount="indefinite"/>
+      <use href="#pulseAnimation"/>
+    </circle>
+    
+    <circle cx="700" cy="540" r="3" fill="#F59E0B">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; -18,-8; 0,0" dur="5.5s" repeatCount="indefinite"/>
+      <use href="#slowPulse"/>
+    </circle>
+
+    <!-- 小粒子群 -->
+    <circle cx="200" cy="50" r="2" fill="#EF4444">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; 8,20; 0,0" dur="7s" repeatCount="indefinite"/>
+      <use href="#pulseAnimation"/>
+    </circle>
+    
+    <circle cx="600" cy="60" r="2.5" fill="#06B6D4">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; -12,-8; 0,0" dur="4.8s" repeatCount="indefinite"/>
+      <use href="#slowPulse"/>
+    </circle>
+    
+    <circle cx="50" cy="400" r="2" fill="#84CC16">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; 15,12; 0,0" dur="5.2s" repeatCount="indefinite"/>
+      <use href="#pulseAnimation"/>
+    </circle>
+    
+    <circle cx="750" cy="420" r="2.2" fill="#F97316">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0,0; -10,15; 0,0" dur="6.5s" repeatCount="indefinite"/>
+      <use href="#slowPulse"/>
+    </circle>
+  </g>
+
+  <!-- 数据流动效果 -->
+  <g opacity="0.6">
+    <!-- 数据点流动 -->
+    <circle r="3" fill="#3B82F6">
+      <animateMotion dur="12s" repeatCount="indefinite">
+        <mpath href="#dataPath1"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="2.5" fill="#10B981">
+      <animateMotion dur="15s" repeatCount="indefinite">
+        <mpath href="#dataPath2"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="2" fill="#8B5CF6">
+      <animateMotion dur="10s" repeatCount="indefinite">
+        <mpath href="#dataPath3"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- 数据路径 -->
+    <path id="dataPath1" d="M200,160 Q300,120 400,140 Q500,160 600,160 Q700,140 600,440 Q500,420 400,460 Q300,480 200,440 Q100,420 200,160" fill="none" opacity="0"/>
+    <path id="dataPath2" d="M120,300 Q220,240 400,280 Q580,320 680,280 Q580,360 400,340 Q220,360 120,300" fill="none" opacity="0"/>
+    <path id="dataPath3" d="M400,110 Q560,180 680,300 Q560,420 400,490 Q240,420 120,300 Q240,180 400,110" fill="none" opacity="0"/>
+  </g>
+
+  <!-- 标题区域 -->
+  <g transform="translate(400, 50)">
+    <text x="0" y="0" text-anchor="middle" fill="#1E293B" font-family="Arial, sans-serif" 
+          font-size="36" font-weight="700" opacity="0.85">
+      Начните свое путешествие в AI-мышлении
+      <animate attributeName="opacity" values="0;0.85;0.85" dur="2s" fill="freeze"/>
+    </text>
+    
+    <text x="0" y="35" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" 
+          font-size="22" opacity="0.75">
+      Общайтесь с AI-интеллектом, исследуйте бесконечные возможности
+      <animate attributeName="opacity" values="0;0.75;0.75" dur="2.5s" fill="freeze"/>
+    </text>
+  </g>
+
+  <!-- 底部装饰文字 -->
+  <g transform="translate(400, 570)">
+    <text x="0" y="0" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" 
+          font-size="16" font-weight="500" opacity="0.7">
+      Умное мышление · Бесконечное творчество
+      <animate attributeName="opacity" values="0;0.7;0.7" dur="3s" fill="freeze"/>
+    </text>
+  </g>
+
+</svg> 

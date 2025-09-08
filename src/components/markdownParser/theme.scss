@@ -1,0 +1,131 @@
+// MarkdownParser 主题样式
+
+// 浅色主题 (默认)
+.markdown-light {
+  // 代码块相关
+  --md-copy-div-bg: #e9ecef;
+  --md-copy-div-color: #495057;
+  --md-copy-div-border: #dee2e6;
+  --md-copy-hover-bg: #f0f8fc;
+  --md-code-inline-bg: #f8f9fa;
+  --md-code-inline-color: #e83e8c;
+  --md-code-block-bg: #ffffff;
+  --md-code-block-border: #e9ecef;
+  --md-code-block-shadow: rgba(0, 0, 0, 0.05);
+  
+  // 表格相关
+  --md-table-border: #e8f4f8;
+  --md-table-cell-border: #f0f8fc;
+  --md-table-header-bg: #e8f4f8;
+  --md-table-header-color: #2c5282;
+  --md-table-odd-row-bg: #fafcff;
+  --md-table-even-row-bg: #ffffff;
+  --md-table-hover-bg: #e8f4f8;
+  --md-table-hover-color: #2c5282;
+  --md-table-hover-shadow: rgba(0, 0, 0, 0.1);
+  
+  // 其他元素
+  --md-hr-color: #e8f4f8;
+  --md-blockquote-bg: #f8fcff;
+  --md-blockquote-border: #94c3f0;
+  --md-blockquote-color: #475569;
+  --md-heading-color: #475569;
+  --md-heading-border: #e8f4f8;
+  --md-strong-color: #334155;
+  --md-em-color: #6b9bd2;
+  --md-del-color: #94a3b8;
+  --md-mark-bg: #f0f8fc;
+  --md-mark-color: #475569;
+  --md-link-color: #6b9bd2;
+  --md-link-hover-color: #475569;
+  --md-link-underline-color: #e8f4f8;
+  --md-link-hover-underline-color: #6b9bd2;
+  --md-list-color: #475569;
+  --md-list-marker-color: #6b9bd2;
+  
+  // 运行结果
+  --md-success-header-bg: #d1fae5;
+  --md-success-header-color: #065f46;
+  --md-error-header-bg: #fee2e2;
+  --md-error-header-color: #991b1b;
+  --md-exception-header-bg: #fef3c7;
+  --md-exception-header-color: #92400e;
+  --md-result-content-bg: #ffffff;
+  
+  // 图片预览器相关
+  --md-image-overlay-bg: rgba(255, 255, 255, 0.82);
+  --md-image-btn-bg: rgba(255, 255, 255, 0.95);
+  --md-image-btn-hover-bg: rgba(255, 255, 255, 1);
+  --md-image-btn-shadow: rgba(0, 0, 0, 0.15);
+  --md-image-btn-hover-shadow: rgba(0, 0, 0, 0.2);
+  --md-image-icon-color: #666;
+  --md-image-icon-hover-color: #333;
+  --md-image-toolbar-bg: rgba(255, 255, 255, 0.95);
+  --md-image-toolbar-shadow: rgba(0, 0, 0, 0.15);
+  --md-image-divider-color: rgba(0, 0, 0, 0.1);
+}
+
+// 暗色主题
+.markdown-dark {
+  // 代码块相关
+  --md-copy-div-bg: #374151;
+  --md-copy-div-color: #d1d5db;
+  --md-copy-div-border: #4b5563;
+  --md-copy-hover-bg: #1f2937;
+  --md-code-inline-bg: #374151;
+  --md-code-inline-color: #f59e0b;
+  --md-code-block-bg: #1f2937;
+  --md-code-block-border: #374151;
+  --md-code-block-shadow: rgba(0, 0, 0, 0.3);
+  
+  // 表格相关
+  --md-table-border: #374151;
+  --md-table-cell-border: #4b5563;
+  --md-table-header-bg: #374151;
+  --md-table-header-color: #93c5fd;
+  --md-table-odd-row-bg: #1f2937;
+  --md-table-even-row-bg: #111827;
+  --md-table-hover-bg: #374151;
+  --md-table-hover-color: #93c5fd;
+  --md-table-hover-shadow: rgba(0, 0, 0, 0.3);
+  
+  // 其他元素
+  --md-hr-color: #374151;
+  --md-blockquote-bg: #1f2937;
+  --md-blockquote-border: #60a5fa;
+  --md-blockquote-color: #d1d5db;
+  --md-heading-color: #f3f4f6;
+  --md-heading-border: #374151;
+  --md-strong-color: #f9fafb;
+  --md-em-color: #93c5fd;
+  --md-del-color: #6b7280;
+  --md-mark-bg: #374151;
+  --md-mark-color: #f3f4f6;
+  --md-link-color: #93c5fd;
+  --md-link-hover-color: #dbeafe;
+  --md-link-underline-color: #374151;
+  --md-link-hover-underline-color: #93c5fd;
+  --md-list-color: #d1d5db;
+  --md-list-marker-color: #93c5fd;
+  
+  // 运行结果
+  --md-success-header-bg: #064e3b;
+  --md-success-header-color: #a7f3d0;
+  --md-error-header-bg: #7f1d1d;
+  --md-error-header-color: #fecaca;
+  --md-exception-header-bg: #78350f;
+  --md-exception-header-color: #fed7aa;
+  --md-result-content-bg: #1f2937;
+  
+  // 图片预览器相关
+  --md-image-overlay-bg: rgba(31, 41, 55, 0.9);
+  --md-image-btn-bg: rgba(55, 65, 81, 0.95);
+  --md-image-btn-hover-bg: rgba(75, 85, 99, 1);
+  --md-image-btn-shadow: rgba(0, 0, 0, 0.3);
+  --md-image-btn-hover-shadow: rgba(0, 0, 0, 0.4);
+  --md-image-icon-color: #d1d5db;
+  --md-image-icon-hover-color: #f3f4f6;
+  --md-image-toolbar-bg: rgba(55, 65, 81, 0.95);
+  --md-image-toolbar-shadow: rgba(0, 0, 0, 0.3);
+  --md-image-divider-color: rgba(255, 255, 255, 0.1);
+}

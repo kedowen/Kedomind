@@ -1,0 +1,10 @@
+export { default as SettingModal } from "./SettingModal.vue";
+export { default as McpConfigModal } from "./McpConfigModal.vue";
+export { default as ChatHistoryModal } from "./ChatHitoryModal.vue";
+export { default as MoveModal } from "./MoveModal.vue";
+export { default as ModelSelectModal } from "./ModelSelect.vue";
+export { default as ModelConfigModal } from "./ModelConfigModal.vue";
+export { default as AddProviderModal } from "./AddProviderModal.vue";
+export { default as AddModelModal } from "./AddModelModal.vue";
+export { default as JsonEditorModal } from "./JsonEditorModal.vue";
+export { default as RoleModal } from "./RoleModal.vue";
